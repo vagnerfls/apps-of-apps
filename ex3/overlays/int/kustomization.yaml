@@ -13,4 +13,4 @@ replacements:
 configMapGenerator:
   - name: env
     envs:
-      - configmap/.env
+      - configmap/variaveis.env
