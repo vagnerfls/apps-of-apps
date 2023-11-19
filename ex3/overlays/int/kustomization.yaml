@@ -14,7 +14,3 @@ configMapGenerator:
   - name: env
     envs:
       - configmap/.env
-
-
-patches:
-  - path: patches/configmap.yaml
