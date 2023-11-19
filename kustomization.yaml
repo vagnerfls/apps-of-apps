@@ -6,3 +6,4 @@ resources:
   - ./repository.yaml
   - ./exemple/
   - ./ex2/base/
+  - ./ex3/overlays/
