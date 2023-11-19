@@ -15,3 +15,10 @@ configMapGenerator:
     namespace: ex3-int
     envs:
       - configmap/variaveis.env
+
+patches:
+  - path: patches/configmap.yaml
+    target:
+      kind: Deployment
+      name: ex3-backend
+      namespace: ex3-int
