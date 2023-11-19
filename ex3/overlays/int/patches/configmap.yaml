@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  
+  name: ex3-backend
+  namespace: ex3-int
+  
+spec:
+  selector:
+    matchLabels:
+      app: ex3-backend
+  template:
+    metadata:
+      labels:
+        app: ex3-backend
+  spec:
+    containers:
+      - name: ex3-backend
+        envFrom:
+          - configMapRef:
+              name: env

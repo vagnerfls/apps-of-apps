@@ -8,3 +8,13 @@ resources:
 replacements:
   - path: replacements/add-actual-namespace.yaml
   - path: replacements/add-foldername.yaml
+
+
+configMapGenerator:
+  - name: env
+    files:
+      - configmap/.env
+
+
+patches:
+  - path: patches/configmap.yaml
