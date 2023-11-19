@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
   - ./AppProject.yaml
   - ./repository.yaml
-  - ./Application/example.yaml
+  - ./Application/exemple.yaml
