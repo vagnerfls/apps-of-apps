@@ -17,6 +17,8 @@ spec:
 
     - namespace: ex3-int
       server: "https://kubernetes.default.svc"
+    - namespace: ex3-hom
+      server: "https://kubernetes.default.svc"      
 
   sourceRepos:
     - "https://github.com/vagnerfls/helm-kustomize.git"
