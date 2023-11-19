@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: ex2
+  namespace: argocd
+spec:
+  clusterResourceWhitelist:
+    - group: "*"
+      kind: StorageClass
+    - group: "*"
+      kind: PersistentVolume
+    - group: "*"
+      kind: Namespace
+  description: "ex2"
+
+  destinations:
+
+    - namespace: ex2
+      server: "https://kubernetes.default.svc"
+
+  sourceRepos:
+    - "https://github.com/vagnerfls/helm-kustomize.git"
