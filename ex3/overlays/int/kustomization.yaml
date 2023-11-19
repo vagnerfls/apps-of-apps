@@ -12,5 +12,6 @@ replacements:
 
 configMapGenerator:
   - name: env
+    namespace: ex3-int
     envs:
       - configmap/variaveis.env
