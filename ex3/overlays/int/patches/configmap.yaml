@@ -1,11 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  
+  annotations:
+    image.openshift.io/triggers: |
+      [
+        {"from":
+          {"kind":"ImageStreamTag"
+            , "name":"ex3-backend:latest"
+          }
+          , "fieldPath":"spec.template.spec.containers[?(@.name==\"ex3-backend\")].image"
+        }
+      ]
+  labels:
+    app.kubernetes.io/instance: ex3-int
   name: ex3-backend
   namespace: ex3-int
-  
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: ex3-backend
@@ -13,9 +24,9 @@ spec:
     metadata:
       labels:
         app: ex3-backend
-  spec:
-    containers:
-      - name: ex3-backend
-        envFrom:
-          - configMapRef:
-              name: env
+    spec:
+      containers:
+        - name: ex3-backend
+          envFrom:
+            - configMapRef:
+                name: env
