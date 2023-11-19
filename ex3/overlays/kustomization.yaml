@@ -5,3 +5,4 @@ resources:
   - ./AppProject.yaml
   - ./repository.yaml
   - int/
+  - hom/
