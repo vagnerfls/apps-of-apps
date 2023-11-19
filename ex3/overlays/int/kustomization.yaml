@@ -12,7 +12,7 @@ replacements:
 
 configMapGenerator:
   - name: env
-    files:
+    envs:
       - configmap/.env
 
 
