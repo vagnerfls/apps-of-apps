@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Secret
 metadata:
-  name: ex2
+  name: ex3
   namespace: argocd
   labels:
     argocd.argoproj.io/secret-type: repository
