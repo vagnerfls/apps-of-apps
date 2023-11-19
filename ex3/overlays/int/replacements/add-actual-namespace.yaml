@@ -1,0 +1,17 @@
+source:
+  kind: Namespace
+  fieldPath: metadata.name
+
+targets:
+  - select:
+      kind: Application
+      name: placeholder
+    fieldPaths:
+      - metadata.name
+      - spec.destination.namespace
+  - select:
+      kind: RoleBinding
+    fieldPaths:
+      - metadata.namespace
+    options:
+      create: true
