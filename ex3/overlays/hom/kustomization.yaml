@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../../base
+  - namespace.yaml
+
+replacements:
+  - path: replacements/add-actual-namespace.yaml
+  - path: replacements/add-foldername.yaml
